@@ -33,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
         btnDisplayTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvDisplay.setText("The time is "+tp.getCurrentHour()+":"+tp.getCurrentMinute());
+                String formattedTime = String.format("%02d:%02d", tp.getCurrentHour(),tp.getCurrentMinute());
+                tvDisplay.setText("The time is "+formattedTime);
             }
         });
 
